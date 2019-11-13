@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700&display=swap');
+
+body {
+  color: white;
+  font-family: "Raleway", sans-serif;
+}
+
+.background {
+  background: url('https://cdn.glitch.com/5b690a05-4b8a-4fa6-add0-6f90039f325d%2FGravity%20Background.png') no-repeat center center fixed;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top:0;
+	left: 0;
+  z-index: -1000;
+}
+
+.title {
+  font-weight: bold;
+  margin-left: 1.5vw;
+}
+
+.dj-av {
+  border-radius: 100%;
+  box-shadow: 0px 0px 8px rgba(255,255,255,.3);
+  width: 11vw;
+  height: 11vw;
+top: 50%;
+  left: 25%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: transparent;
+}
+
+.art-av {
+  border-radius: 100%;
+  box-shadow: 0px 0px 8px rgba(255,255,255,.3);
+  width: 11vw;
+  height: 11vw;
+top: 50%;
+  left: 75%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: transparent;
+}
+
+.credits {
+  position: fixed;
+  bottom: 30px;
+  width: fit-content;
+  max-width:30%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.cont {
+  text-align: left;
+  border-radius: 100px;
+  background: rgba(255,255,255,.1);
+  box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,.1), 0px 0px 20px rgba(0,0,0,.5);
+  padding: 12px;
+}
+
+.cont > * {
+  padding: 0;
+  margin: 0;
+}
+
+.credits > a {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.streaminfo-container {
+  text-align: left;
+  width:60%;
+}
+
+.left {
+  align-items: left;
+}
+
+.info-conts {
+  top: 45%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.req {
+  left: 41.5%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 12.5%;
+  top: 25%;
+  border: 2px solid white;
+  text-align: center;
+  font-weight: 800;
+  border-radius: 100px;
+  background: rgba(255,255,255,.1);
+  box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,.1), 0px 0px 20px rgba(0,0,0,.5);
+  padding: 12px;
+}
+
+.app {
+  left: 58.5%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 12.5%;
+  top: 25%;
+  border: 2px solid white;
+  text-align: center;
+  font-weight: 800;
+  border-radius: 100px;
+  background: rgba(255,255,255,.1);
+  box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,.1), 0px 0px 20px rgba(0,0,0,.5);
+  padding: 12px;
+}
+
+.streaminfo {
+  color: white;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;text-transform: uppercase;letter-spacing: 1px;
+}
+
+.nav-item {
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.discord {
+  margin-left: 94vw;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  margin-top: -2.85vw;
+}
+
+.timetable {
+  margin-left: 84vw;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  margin-top: -2.85vw;
+}
+
+.twitter {
+  margin-left: 74vw;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  margin-top: -2.85vw;
+}
+
+.slider {
+  -webkit-appearance: none;
+    width: calc(100% - 15px);
+    height: 3px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+input {
+  font-family: "Raleway", sans-serif;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 13px;
+    font-size: 16px;
+}
+
+.controls i {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.controls cont{
+  margin-left: 6px;
+}
+
+.slider1 {
+  top: 68%;
+  left: 53.5%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.playcont {
+  width: 4%;
+    left: 37.5%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 68%;
+  text-align: center;
+  font-weight: 800;
+  border-radius: 100px;
+  background: rgba(255,255,255,.1);
+  box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,.1), 0px 0px 20px rgba(0,0,0,.5);
+  padding: 12px;
+}

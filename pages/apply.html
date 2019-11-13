@@ -1,0 +1,75 @@
+<style>
+
+     input{
+         padding:10px 24px;
+         width:500px;
+         color:black;
+         border-radius:3px;
+         border: 0;
+         margin-bottom:15px;
+         text-shadow:0px 1px rgba(0,0,0,.2);
+         box-shadow: inset 0px -2px 0px 0px rgba(255,255,255,.1), inset 0px -1px 18px 0px rgba(255,255,255,.1), 0px -1px 28px 0px rgba(0,0,0,.4);
+     }
+     button{
+         background: purple;
+         padding:10px 24px;
+         border-radius:3px;
+         width:547px;
+       color: white;
+       text-transform: uppercase;
+         border: 0;
+         text-shadow:0px 1px rgba(0,0,0,.2);
+         box-shadow: inset 0px -2px 0px 0px rgba(255,255,255,.1), inset 0px -1px 18px 0px rgba(255,255,255,.1), 0px -1px 28px 0px rgba(0,0,0,.4);
+     }
+ 
+</style>
+<center>
+<form id="requestform" style="top: 50%; left: 50%; position: absolute; transform: translate(-50%, -50%);" action="#">
+     <input type="text" placeholder="Name" name="name" required=""><p></p>
+     <input placeholder="Discord (e.g: Example#0001)" name="discord" required=""><p></p>
+    <input placeholder="Age" name="age" required=""><p></p>
+    <input type="text" placeholder="Region (EU/NA/OC)" name="region" required=""><p></p>
+  <input type="text" placeholder="Previous Experience" name="exp" required=""><p></p>
+     <button onclick="changeText();" type="submit" class="sendRequest" id="Requestsent">SEND APPLICATION</button>
+ </form>
+</center>
+<center>
+<h1 style="top: 50%; left: 50%; position: absolute; transform: translate(-50%, -50%); display: none;" id="gohome">
+  Application sent, please click <strong><a href="https://pitch-promise.glitch.me/lite/#Home">here</a></strong> to go home.
+  </h1>
+</center>
+<script>
+     $('form').submit(function(e){
+         e.preventDefault()
+         var formData = {
+             'name'         : $('input[name=name]').val(),
+             'discord'      : $('input[name=discord]').val(),
+             'age'      : $('input[name=age]').val(),
+             'region'      : $('input[name=region]').val(),
+             'exp'      : $('input[name=exp]').val()
+          
+         }
+         var name = $('input[name=name]').val()
+         var discord = $('input[name=discord]').val()
+         var age = $('input[name=age]').val()
+         var region = $('input[name=region]').val()
+         var exp = $('input[name=exp]').val()
+            
+         $.ajax({
+             type           : 'POST',
+             url            : 'https://gravityradio.pw/apply.php?name='+name+'&discord='+discord+'&age='+age+'&region='+region+'&exp='+exp,
+             data           : formData,
+             dataType       : 'json',
+             encode         : true
+         })
+         .done(function(data){
+             console.log(data)
+         })
+         $(".sendRequest").attr("style","background: #00e640;")
+             $(".sendRequest").html("Sent!")
+       $("#requestform").attr("style", "display: none;")
+       $("#gohome").attr("style", "display: block;")
+     })
+    
+
+ </script>
